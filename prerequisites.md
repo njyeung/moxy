@@ -114,7 +114,7 @@ By default Linux drops any packet that isn't addressed to the machine itself. Bo
 - Proxmox passes traffic between `wg0` and `vmbr1`, and from `vmbr1` out `vmbr0` for the masquerade rule above.
 - The VPS passes traffic arriving on its public interface into `wg0` toward the VM subnet, which is what the forwarding service relies on.
 
-Enable forwarding:
+Enable forwarding on both the VPS and Proxmox:
 ```
 echo 'net.ipv4.ip_forward=1' > /etc/sysctl.d/99-forward.conf
 sysctl --system
