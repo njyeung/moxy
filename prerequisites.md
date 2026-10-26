@@ -9,7 +9,7 @@ Everything that has to be in place before the forwarding service can run. Steps 
 | WireGuard subnet | `10.0.0.0/24` (Proxmox `10.0.0.1`, VPS `10.0.0.2`), UDP port `51820` on the VPS |
 | Exposed VM subnet | `172.16.10.0/24` on `vmbr1`, gateway `172.16.10.1` (the Proxmox host) |
 
-The three subnets must not overlap. Avoid `172.17.0.0/16`-`172.31.0.0/16` for the VM subnet since Docker uses those by default, and remember `127.x.x.x` is loopback, not a typo-safe neighbour of `172.x.x.x`.
+The three subnets must not overlap.
 
 ## 1. WireGuard keys
 
