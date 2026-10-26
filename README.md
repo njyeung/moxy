@@ -1,5 +1,7 @@
 # Moxy
 
+![Proxmox VM header with the tags fwd-udp-8080-80 and ip-172.16.10.12](assets/hero.png)
+
 A Proxmox plugin that allows proxying of traffic from a VPS to VMs via easy to configure tags within the Proxmox UI
 
 ## Prerequisites
