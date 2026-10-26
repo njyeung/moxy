@@ -124,7 +124,7 @@ sysctl --system
 
 Moxy pushes forwarding rules to the VPS by piping nftables rulesets over SSH, through the WireGuard tunnel.
 
-On the VPS, ensure you're root, or a user can run `nft` **without a password**:
+On the VPS, ensure you're either root or a user that can run `nft` **without a password**:
 
 On Proxmox, generate a key and record the VPS host key under the /etc/moxy/ directory:
 ```
