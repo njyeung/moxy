@@ -13,6 +13,8 @@ The three subnets must not overlap.
 
 ## 1. WireGuard keys
 
+Do the following for both the Proxmox machine and the VPS:
+
 ```
 apt install wireguard
 cd /etc/wireguard
