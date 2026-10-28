@@ -20,9 +20,25 @@ Full step-by-step setup is in [prerequisites.md](prerequisites.md).
 - Private home network: 192.168.1.0/24
 - Linux network bridge, private to the Proxmox server: 172.16.10.0/24
 
+## Install
+
+On the Proxmox host, as root:
+```
+curl -fsSLO https://raw.githubusercontent.com/njyeung/moxy/main/install.sh
+bash install.sh
+```
+
+This downloads the latest release, verifies its checksum, installs it to `/usr/local/bin/moxy`, and sets up the `moxy` systemd service. On a first install it creates `/etc/moxy/moxy.env` from the example; fill it in (see [ENV](#env)), then:
+```
+systemctl start moxy
+journalctl -u moxy -f
+```
+
+Run the script again to upgrade. It keeps your `moxy.env` and restarts the service. To install a specific version, run `MOXY_VERSION=v1.2.3 bash install.sh`.
+
 ## ENV
 
-Copy `.env.example` to `.env` and fill it in.
+The service reads `/etc/moxy/moxy.env`. For local development, copy `.env.example` to `.env` in the working directory instead.
 
 ### Required
 
